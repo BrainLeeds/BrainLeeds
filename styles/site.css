@@ -1,4 +1,6 @@
-﻿@font-face {
+﻿/* Fonts */
+
+@font-face {
     font-family: "Frutiger W01";
     src: url("../content/fonts/Frutiger.ttf");
 }
@@ -18,9 +20,24 @@
     font-family: "Franklin Gothic Heavy", serif;
 }
 
+/* Default Global Configurations */
+
 body {
     font-family: Frutiger W01, Arial, sans-serif;
 }
+
+@media (max-width: 576px) {
+    html, body {
+        width: auto !important;
+        overflow-x: hidden !important
+    }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: white;
+}
+
+/* Font Sizes */
 
 .font-size-100 {
     font-size: 1.00rem;
@@ -39,30 +56,33 @@ body {
     font-size: 1.30rem;
 }
 
-.bl-bg-primary {
-    background-color: #F8C8DC;
+/* Background Colours */
+
+/*:root {*/
+/*    --bl-primary: #F8C8DC;*/
+/*    --bl-secondary: #F7DCE7;*/
+/*    --bl-tertiary: #FAEDF2;*/
+/*}*/
+
+:root {
+    --bl-primary: #0E1012;
+    --bl-secondary: #1A1D20;
+    --bl-tertiary: #212529;
 }
 
-.bl-bg-primary-subtle {
-    background-color:  #F8C8DC;
-    opacity: 80%;
+.bl-bg-primary {
+    background-color: var(--bl-primary)
 }
 
 .bl-bg-secondary {
-    background-color: #f7dce7;
+    background-color: var(--bl-secondary)
 }
 
 .bl-bg-tertiary {
-    background-color: #faedf2;
+    background-color: var(--bl-tertiary)
 }
 
-.bl-colour-info {
-    color: #588061;
-}
-
-.bl-colour-hint {
-    color: #869F77;
-}
+/* Hover Underline for Navigation Bar */
 
 .bl-pink-underline {
     display: inline-block;
@@ -85,44 +105,51 @@ body {
     width: 100%;
 }
 
-.border-shadow {
+/* Hover Border Shadow for Cards */
+
+.bl-hover-shadow {
     border: 1px solid transparent; 
     box-shadow: none;
     transition: border-color 0.3s, box-shadow 0.3s; 
 }
 
-.border-shadow:hover {
-    border-color: #F8C8DC; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.bl-hover-shadow:hover {
+    border-color: white; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 576px) {
+    .container-small {
+        max-width: 540px;
+    }
 }
 
 @media (min-width: 768px) {
     .container-small {
         width: 550px;
     }
-    .container-large {
-        width: 1070px;
-    }
 }
+
 @media (min-width: 992px) {
     .container-small {
         width: 850px;
     }
-    .container-large {
-        width: 1170px;
-    }
 }
+
 @media (min-width: 1200px) {
     .container-small {
         width: 1150px;
     }
-    .container-large {
-        width: 1500px;
-    }
 }
 
-.container-small, .container-large {
+.container-small  {
     max-width: 100%;
+}
+
+/* Bootstrap Overrides */
+
+.navbar-light, .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .accordion {
