@@ -1,0 +1,136 @@
+﻿@font-face {
+    font-family: "Frutiger W01";
+    src: url("../content/fonts/Frutiger.ttf");
+}
+
+@font-face {
+    font-family: "Frutiger W01";
+    font-weight: bold;
+    src: url("../content/fonts/Frutiger_Bold.ttf");
+}
+
+@font-face {
+    font-family: "Publica Play";
+    src: url("../content/fonts/PublicaPlay-Regular.otf");
+}
+
+.font-franklin-heavy {
+    font-family: "Franklin Gothic Heavy", serif;
+}
+
+body {
+    font-family: Frutiger W01, Arial, sans-serif;
+}
+
+.font-size-100 {
+    font-size: 1.00rem;
+}
+
+.font-size-110 {
+    font-size: 1.10rem;
+}
+
+
+.font-size-125 {
+    font-size: 1.25rem;
+}
+
+.font-size-130 {
+    font-size: 1.30rem;
+}
+
+.bl-bg-primary {
+    background-color: #F8C8DC;
+}
+
+.bl-bg-primary-subtle {
+    background-color:  #F8C8DC;
+    opacity: 80%;
+}
+
+.bl-bg-secondary {
+    background-color: #f7dce7;
+}
+
+.bl-bg-tertiary {
+    background-color: #faedf2;
+}
+
+.bl-colour-info {
+    color: #588061;
+}
+
+.bl-colour-hint {
+    color: #869F77;
+}
+
+.bl-pink-underline {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.25rem;
+}
+
+.bl-pink-underline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #F1B6AC;
+    transition: width 0.25s ease-out;
+}
+
+.bl-pink-underline:hover::before {
+    width: 100%;
+}
+
+.border-shadow {
+    border: 1px solid transparent; 
+    box-shadow: none;
+    transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+.border-shadow:hover {
+    border-color: #F8C8DC; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    .container-small {
+        width: 550px;
+    }
+    .container-large {
+        width: 1070px;
+    }
+}
+@media (min-width: 992px) {
+    .container-small {
+        width: 850px;
+    }
+    .container-large {
+        width: 1170px;
+    }
+}
+@media (min-width: 1200px) {
+    .container-small {
+        width: 1150px;
+    }
+    .container-large {
+        width: 1500px;
+    }
+}
+
+.container-small, .container-large {
+    max-width: 100%;
+}
+
+.accordion {
+    --bs-accordion-active-bg: #F8C8DC;
+    --bs-accordion-active-color: black;
+}
+
+.accordion-header {
+    color: black    ;
+}
+
